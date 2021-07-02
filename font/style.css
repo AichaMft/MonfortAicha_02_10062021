@@ -33,13 +33,12 @@ main {
 #filtres {
     display: flexbox; }
 #filtres button {
-    font-family: "raleway";
     font-weight: bold;
     font-size: medium;
     background-color: white;
     border: 1px #f2f2f2 solid;
     border-radius: 20px 20px 20px 20px;
-    padding: 10px 10px 10px 0px; }
+    padding: 0px 15px 0px 0px; }
 #hebmarseille {
     flex: 1 33%;
     margin: 15px;
@@ -62,9 +61,8 @@ ul {
 form {
     display: inline-flex;
     width: fit-content }
-.fas fa-map-marker-alt {
+.fa-map-marker-alt {
     content: "\f3c5"; 
-    display: block;
     text-align: center;
     min-width: 40px;
     max-width: 40px;
@@ -74,40 +72,44 @@ form {
     border-radius: 10px 0px 0px 10px;
     box-shadow: transparent black;
     background-color: #f2f2f2; }
-.fas fa-money-bill-wave {
+.fa-money-bill-wave {
     content: "\f53a";
     background-color: #deebff;
     color : #0065fc;
-    font-size: medium;
+    font-size: large;
     border: 1px #deebff solid; 
     border-radius: 20px;
-    padding : 10px }
-.fas fa-child {
+    padding : 10px ;
+    margin-right: 10px ;}
+.fa-child {
     content: "\f1ae";
     background-color: #deebff;
     color : #0065fc;
-    font-size: medium;
+    font-size: large;
     border: 1px #deebff solid; 
-    border-radius: 20px;
-    padding : 10px  }
-.fas fa-heart {
+    border-radius: 50%;
+    padding : 10px ;
+    width: 20px;
+    margin-right: 10px }
+.fa-heart {
     content: "\f004"; 
     background-color: #deebff;
     color : #0065fc;
-    font-size: medium;
+    font-size: large;
     border: 1px #deebff solid; 
     border-radius: 20px;
-    padding : 10px }
-.fas fa-dog {
+    padding : 10px;
+    margin-right: 10px }
+.fa-dog {
     content: "\f6d3"; 
     background-color: #deebff;
     color : #0065fc;
-    font-size: medium;
+    font-size: large;
     border: 1px #deebff solid; 
     border-radius: 20px;
-    padding : 10px }
+    padding : 10px ;
+    margin-right: 10px}
 form input {
-    display: block;
     font-weight: bold;
     font-size: medium;
     border: 1px #f2f2f2 solid;
