@@ -21,7 +21,7 @@ header
     align-items: center;
     margin: auto;
 }
-header ul li 
+header ul li            /* METTRE SUR UNE SEULE LIGNE MEME EN 600PX*/
 {
     order: 1;
     align-self: center;
@@ -57,11 +57,13 @@ main
     display: flex;
     align-items: stretch;
     max-width: 100%;
-    flex-direction: column; 
+    flex-direction: row; 
     flex-wrap: wrap; 
 }
 #recherche
 {
+    order:0;
+    flex:1 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -110,31 +112,103 @@ form button
     border-radius: 20px 20px 20px 20px;
     padding: 0px 15px 0px 0px; 
 }
-#hebmarseille 
+
+section
 {
-    flex: 1 33%;
-    margin: 15px;
-    max-width: 850px;
+    margin: 0.25rem;
+}
+section img
+{
+    margin: 0;
+    padding: 0;
+    width: 160px;
+    height: 100px;
+}
+figcaption
+{
+    font-weight: bold;
+}
+#hebmarseille           /*AMELIORER LES VIGNETTES ET RETIRER L'ESPACE ENTRE LE TITRE ET LES IMAGES*/
+{
+    display: flex;
+    flex-direction: row;
+    font-size: small;
+    flex-wrap: wrap;
+    justify-content: space-between;
     background-color: #f2f2f2;
     border: 1px #f2f2f2 solid;
-    border-radius: 15px; 
+    border-radius: 1rem; 
+    padding: 1rem;
+    max-width: 60%;
+}
+#hebmarseille a
+{
+    text-align: center;
+    border: 3px transparent solid;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 3px #f2f2f2;
+    border-radius: 1rem;
+    background-color: white;
+    margin:0.5rem;
+    max-width: 30%;
+    max-height: fit-content;
+}
+#hebmarseille h2
+{
+    order: 0;
+    flex: 1 100%;
+}
+#hebmarseille button
+{
+    text-align: center;
+    background-color: #f2f2f2;
+    font-size: medium;
+    font-weight: bold;
+    border:1px transparent solid;
+    padding-left: 1rem;
 }
 #lespluspopulaires 
 {
-    flex: 2 33%;
-    max-width: 590px;
+    flex:2;
+    display: flex;
+    flex-direction: column;
     background-color: #f2f2f2;
-    border-radius: 15px; 
+    border-radius: 1rem; 
+    font-size: small;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px #f2f2f2 solid;
+    padding: 1rem;
 }
-#activitesmarseille {
-    flex: 3 100%;
-    background-color: #f2f2f2;
-    border-radius: 15px; 
-}
-section
+.titrepopu
 {
-    margin: 0.5rem;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
+#lespluspopulaires a
+{
+    text-align: center;
+    border: 3px transparent solid;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 3px #f2f2f2;
+    border-radius: 1rem;
+    background-color: white;
+    margin:0.5rem;
+    max-width: 30%;
+    max-height: fit-content;
+}
+#activitesmarseille      /*AJOUTER L'ORDRE ET L'IMPORTANCE DU CONTENU*/
+{
+    display: flex;
+    flex-direction: row;
+    flex:3 100%;
+    background-color: #f2f2f2;
+    border-radius: 15px; 
+}
+
+
 
 @media  screen and (max-width: 1280px) { /*VOIR AVEC JULIE SI CELUI CI EST NECESSAIRE*/
     header
@@ -308,6 +382,14 @@ section
     border-radius: 55%; 
     border: 2px #f2f2f2 solid;
     font-size: x-large}
+.fa-star
+{
+    color: #0065fc;
+}
+.fa-chart-line
+{
+    font-size: x-large;
+}
 
 ul 
 {
