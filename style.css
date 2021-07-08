@@ -117,18 +117,19 @@ section
 {
     margin: 0.25rem;
 }
-section img
+#hebmarseille img
 {
     margin: 0;
     padding: 0;
     width: 160px;
     height: 100px;
+    border-radius: 1rem 1rem 0rem 0rem;
 }
 figcaption
 {
     font-weight: bold;
 }
-#hebmarseille           /*AMELIORER LES VIGNETTES ET RETIRER L'ESPACE ENTRE LE TITRE ET LES IMAGES*/
+#hebmarseille           /*AMELIORER LES VIGNETTES ET RETIRER L'ESPACE ENTRE LE TITRE ET LES IMAGES voire changer le html*/
 {
     display: flex;
     flex-direction: row;
@@ -144,11 +145,7 @@ figcaption
 #hebmarseille a
 {
     text-align: center;
-    border: 3px transparent solid;
     flex-wrap: wrap;
-    box-shadow: 3px 3px 3px #f2f2f2;
-    border-radius: 1rem;
-    background-color: white;
     margin:0.5rem;
     max-width: 30%;
     max-height: fit-content;
@@ -167,36 +164,41 @@ figcaption
     border:1px transparent solid;
     padding-left: 1rem;
 }
+#lespluspopulaires img
+{
+    float: left;
+    width: 150px;
+    height: 100px;
+    border: 1px transparent solid;
+    border-radius: 1rem 0rem 0rem 1rem;
+}
 #lespluspopulaires 
 {
     flex:2;
     display: flex;
-    flex-direction: column;
-    background-color: #f2f2f2;
-    border-radius: 1rem; 
+    flex-direction: column; 
     font-size: small;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: left;
+    background-color: #f2f2f2;
     border: 1px #f2f2f2 solid;
-    padding: 1rem;
+    border-radius: 1rem; 
+    padding:1rem;
 }
 .titrepopu
 {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
 }
 #lespluspopulaires a
 {
     text-align: center;
     border: 3px transparent solid;
     flex-wrap: wrap;
-    box-shadow: 3px 3px 3px #f2f2f2;
-    border-radius: 1rem;
-    background-color: white;
-    margin:0.5rem;
-    max-width: 30%;
+    max-width: 100%;
     max-height: fit-content;
 }
 #activitesmarseille      /*AJOUTER L'ORDRE ET L'IMPORTANCE DU CONTENU*/
