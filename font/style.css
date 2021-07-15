@@ -2,7 +2,7 @@
     font-family: "raleway";
     src: url("font/Raleway-Regular.ttf"); }
 
-body
+*
 {
     font-family: "raleway";
 }
@@ -13,42 +13,35 @@ a
 }
 header
 {
-    display: flex;
-    flex-wrap: wrap  ;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    margin: auto;
-}
-header ul li 
-{
-    order: 1;
-    align-self: center;
-    display: inline-flex;
-    flex-wrap: nowrap;
-    justify-content: left;
-    list-style-type: none;
-    text-align: center;
     margin: 0;
+    max-width: 100%;
+}
+nav
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.liennav            /* METTRE SUR UNE SEULE LIGNE MEME EN 600PX*/
+{
     font-weight: 500;
     border-top: 2px transparent solid;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 1rem;
 }
-header ul li:hover 
+.liennav:hover 
 {
     border-top: 2px #0065fc solid;
     color: #0065fc; 
 }
 .logo
 {
-    order:0;
-    flex:1 60%;
-    text-align: left;
+    float: left;
 }
 .navinscription
 {
-    order: 2;
+    align-self: center;
     padding: 1rem;
     color: #0065fc;
 }
@@ -56,169 +49,409 @@ main
 {
     display: flex;
     align-items: stretch;
-    max-width: 100%;
-    flex-direction: column; 
+    width: 100%;
+    height: 100%;
+    flex-direction: row; 
     flex-wrap: wrap; 
 }
 #recherche
 {
+    order:0;
+    flex:1 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    align-content: flex-start;
+    overflow: auto;
+
 }
-.cliquesearch /* ICONE DE RECHERCHE BALISE BUTTON*/
+#recherche h1
 {
-   visibility: hidden; 
+    margin-bottom:0;
 }
-form 
+#recherche p
+{
+    margin-top:0,1rem;
+    margin-bottom: 1rem;
+}
+form                                            /*BARRE DE RECHERCHE*/
 {
     display: inline-flex;
-    width: fit-content ;
+    height: 45px;
+    width: min-content;
+    border-radius: 1.1rem;
+    margin: 0 0 2rem 0;
+    
 }
 form input 
 {
     font-weight: bold;
     font-size: medium;
     border: 1px #f2f2f2 solid;
-    box-shadow: 0px 0px 0px black;
-    padding: 0px 0px 0px 10px; 
+    padding-left: 1rem; 
 }
 form button 
 { 
-    font-weight: 600;
+    text-align: center;
     color: white;
-    font-size: medium;
-    display: block;
+    font-size: large;
     border: 3px #0065fc solid;
     text-shadow: 2px white;
     background-color: #0065fc;
-    padding: 5px 10px 5px 10px;
     border-radius: 0 1rem 1rem 0;
+    padding: 0 1rem 0 1rem;
 }
+.cliquesearch                           /*ICONE RECHERCHE LOUPE*/
+{
+   display:none; 
+}
+.fa-map-marker-alt {                  /*ICONE LOCALISATION*/         
+    border: 2px #f2f2f2 solid;
+    text-align: center;
+    padding-top: 0.7rem;
+    width: 45px;
+    background-color: #f2f2f2;
+    border-radius: 1rem 0 0 1rem;}
 #filtres 
 {
-    display: flexbox; 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: center;
+}
+#filtres h1
+{
+    margin:1rem 0 0 0;
+    padding:0;
+}
+#filtres h2
+{
+    font-size: medium;
+    margin: 1rem 1rem 1rem 0;
 }
 #filtres button 
 {
     font-weight: bold;
     font-size: medium;
     background-color: white;
-    border: 1px #f2f2f2 solid;
-    border-radius: 20px 20px 20px 20px;
-    padding: 0px 15px 0px 0px; 
+    border: 2px #f2f2f2 solid;
+    border-left: transparent;
+    border-radius: 2rem;
+    text-align: center;
+    padding: 0 1rem 0 0;
+    height: min-content;
+    margin: 0 1.5rem 0 1rem;
 }
-#hebmarseille 
+#filtres button:hover
 {
-    flex: 1 33%;
-    margin: 15px;
-    max-width: 850px;
-    background-color: #f2f2f2;
-    border: 1px #f2f2f2 solid;
-    border-radius: 15px; 
+    background-color: #deebff;
 }
-#lespluspopulaires 
-{
-    flex: 2 33%;
-    max-width: 590px;
-    background-color: #f2f2f2;
-    border-radius: 15px; 
-}
-#activitesmarseille {
-    flex: 3 100%;
-    background-color: #f2f2f2;
-    border-radius: 15px; 
-}
+.fa-money-bill-wave {                       /*ICONES FILTRES*/
+    background-color: #deebff;
+    color : #0065fc;
+    font-size: small;
+    border: 1px #deebff solid; 
+    border-radius: 2rem;
+    padding : 0.8rem ;
+    margin-right: 10px ;}
+.fa-child {
+    background-color: #deebff;
+    color : #0065fc;
+    font-size: small;
+    border: 1px #deebff solid; 
+    border-radius: 2rem;
+    padding : 0.8rem;
+    width: 20px;
+    margin-right: 10px }
+.fa-heart {
+    background-color: #deebff;
+    color : #0065fc;
+    font-size: small;
+    border: 1px #deebff solid; 
+    border-radius: 2rem;
+    padding : 0.8rem;
+    margin-right: 10px }
+.fa-dog { 
+    background-color: #deebff;
+    color : #0065fc;
+    font-size: small;
+    border: 1px #deebff solid; 
+    border-radius: 2rem;
+    padding : 0.8rem ;
+    margin-right: 10px}
+.fa-info-circle {
+    color: white;
+    background-color: #0065fc ;
+    border-radius: 1rem; 
+    margin-right: 0.3rem;
+    border: 2px #f2f2f2 solid;}
 section
 {
-    margin: 0.5rem;
+    margin: 0.25rem;
 }
 
-@media  screen and (max-width: 1280px) { /*VOIR AVEC JULIE SI CELUI CI EST NECESSAIRE*/
-    header
+#hebmarseille                               /*SECTION HEBERGEMENT A MARSEILLE*/
+{
+    order:1;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    font-size: small;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f2f2f2;
+    border-radius: 1rem; 
+    margin:2rem 1rem 1rem 0;
+    padding:0.5rem;
+
+}
+#hebmarseille h2
+{
+    padding-left: 2rem;
+    padding-top: 1rem;
+    order: 0;
+    flex: 1 100%;
+}
+#hebmarseille figure
+{
+    display: flex;
+    flex-flow: column;
+    margin:0 0 2rem 0;
+    box-shadow: 3px 3px 3px #d8d8d8;
+    border-radius: 1rem;
+
+}
+#hebmarseille img
+{
+    margin: 0;
+    padding: 0.25rem;
+    width: 250px;
+    height:125px;
+    border-radius: 1rem 1rem 0rem 0rem;
+    background-color: white;
+}
+#hebmarseille figcaption
+{
+    padding:0.50rem;
+    padding-top:0.20;
+    margin:0;
+    background-color: white;
+    border-radius: 0rem 0rem 1rem 1rem;
+}
+.affplus
+{
+    flex:8 100%;
+    justify-content: left;
+    font-weight: bolder;
+    font-size: medium;
+    padding-left: 2rem;
+}
+
+#lespluspopulaires                          /*SECTION LES PLUS POPULAIRES*/
+{
+    order:2;
+    width: 25%;
+    display: flex;
+    flex-direction: column; 
+    font-size: small;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: left;
+    background-color: #f2f2f2;
+    border: 1px #f2f2f2 solid;
+    border-radius: 1rem; 
+    padding:1rem;
+    margin: 2rem 0 1rem 0;
+}
+.fa-chart-line
+{
+    font-size: x-large;
+    padding-top: 1rem;
+    padding-right: 1rem;
+}
+.titrepopu
+{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    margin-bottom: 0;
+}
+#lespluspopulaires figure
+{
+    display: flex;
+    width: 100%;
+    height: 120px;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin:0 0 2rem 0;
+    box-shadow: 3px 3px 3px white;
+    background-color: white;
+    border-radius: 1rem;
+}
+#lespluspopulaires img
+{
+    float: left;
+    width: 110px;
+    height: 120px;
+    border: 1px transparent solid;
+    border-radius: 1rem 0rem 0rem 1rem;
+}
+#lespluspopulaires figcaption
+{
+    padding:1rem;
+    margin:0;
+    background-color: white;
+    border-radius: 0rem 1rem 0rem 1rem;
+}
+#lespluspopulaires p
+{
+    align-self: flex-start;
+}
+.starsnote
+{
+    align-self: flex-end;
+}
+/*AJOUTER L'ORDRE ET L'IMPORTANCE DU CONTENU*/
+#activitesmarseille                             /*SECTION ACTIVITES A MARSEILLE*/
+{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    order:3;
+    border-radius: 1rem; 
+    padding:1rem;
+}
+#activitesmarseille h2
+{
+    padding-left: 2rem;
+    order: 0;
+    flex: 1 100%;
+}
+#activitesmarseille figure
+{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    margin:0.5rem;
+    background-color: white;
+    box-shadow: 2px 2px 2px #f2f2f2;
+    margin:1rem
+}
+.vieuxport, .calanques
+{
+    border-radius: 1rem 1rem 0rem 0rem;
+    width:250px;
+    height: 350px;
+}
+.pomegues, .ilesdufrioul, .longchamp, .notredamedelagarde
+{
+    border-radius: 1rem 1rem 0rem 0rem;
+    width: 250px;
+    height: 150px;
+}
+.miniact
+{
+    display: flex;
+    flex-direction: column;
+}
+#activitesmarseille figcaption
+{
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    padding: 1rem;
+    margin:0;
+    border-radius: 0rem 0rem 1rem 1rem;
+    object-fit: cover;
+}
+.fa-star
+{
+    color: #0065fc;
+}
+ul 
+{
+    list-style: none; 
+}
+footer                                  /*PIED DE PAGE*/
+{
+    display: flex;
+    justify-content: space-around ;
+    flex-direction: row;
+    background-color: #f2f2f2;
+    width: 100%;
+    margin:1rem
+}
+footer h3
+{
+    font-size: medium;
+    text-align: left;
+    margin:1rem 0 1rem 0;
+
+}
+.footercolonne 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    max-width: 100%;
+}
+.footlien 
+{
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+}
+
+@media screen and (min-width: 375px) and (max-width:600px) 
+{              /*VERSION MOBILE*/
+    nav
     {
-        display: flex;
-        flex-wrap: inherit  ;
-        flex-direction: row;
-        justify-content: space-between;
+        order:-1;
+        align-self: left;
+        flex-direction: column;
+        flex-wrap: wrap;
         text-align: center;
-        align-items: center;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
     }
-    header ul li 
-    {
-        display: inline-flex;
-        order:3; 
-        flex-direction: row;
-        border-bottom: 2px transparent solid;
-        padding: 2rem 3rem 1rem 3rem;
-    }
-    header ul li:hover 
-    {
-        border-top: 2px #0065fc solid;
-        color: #0065fc;
-            }
     .logo
     {
+        order:-1;
+        position: fixed;
+        width: 70px;
+    }
+    .liennav
+    {
         order:0;
-        flex:1 ;
-        text-align: left;
+        width: 50%;
+        border-bottom: 2px #f2f2f2 solid;
+        padding:1rem 2rem 1rem 2rem;
+    }
+    .liennav:hover 
+    {
+    border-bottom: 2px #0065fc solid;
+    border-top:2px transparent solid;
+    transition-duration: 0.1s; 
     }
     .navinscription
     {
-        padding-top: 3rem;
-        order: 1;
-        padding: 1rem;
-        color: #0065fc;
+        order: -1;
+        align-self: flex-end;
     }
     #recherche
     {
-        max-width: 60%;
-        justify-content: space-between;
-    }    
-}
-
-@media screen and (max-width: 600px) {              /*VERSION MOBILE*/
-    header
-    {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: center;
-        align-items: center;
-        list-style-type: none;
-        margin: auto;
-    }
-    header ul li
-    {
-       display: inline-flex;
-       order:3; 
-       flex-direction: row;
-       justify-content: left;
-       border-bottom: 2px #f2f2f2 solid;
-       padding: 2rem 2rem 1rem 2rem;
-       margin: auto;
-    }
-    .logo
-    {
-        order:-1;
-        flex:1 50%
-    }
-    .navinscription
-    {
-        color: #0065fc;
-        order:-1;
+       width: min-content;
+       text-align: center;
     }
     form 
     {
         display: inline-flex;
+        flex-wrap: nowrap;
         width: fit-content ;
-        max-width: 100%;
+        margin: auto;
     }
     form input 
     {
@@ -229,117 +462,34 @@ section
         padding: 0px 0px 0px 10px;
         max-width: 15rem;
     } 
-    .cliquerecherche
+    .cliquerecherche /*display:none (non visible) */
     {
-        position: absolute;
-        clip: rect(1px 1px 1px 1px);
-        clip: rect(1px, 1px, 1px, 1px);
-        height: 1px;
-        overflow: hidden;
-        width: 1px;
+        display: none;
     }
     .cliquesearch
     {
-    visibility:visible ;
     font-weight: 600;
     color: white;
     font-size: medium;
-    display: block;
+    display: block ;
     border: 3px #0065fc solid;
     text-shadow: 2px white;
     background-color: #0065fc;
-    padding: 5px 10px 5px 10px;
-    width: 6rem; 
+    align-items: center;
+    width: 4rem; 
     }
     #filtres
     {
         flex-direction: row;
         flex-wrap: wrap;
+
+    }
+    #filtres h2
+    {
+        flex: 1 100%
     }
     #filtres button 
     {
         margin: 0.25rem ;
     }
-}
-
-.fa-map-marker-alt {                        /*ICONES FONT AWESOME*/
-    border: 2px #f2f2f2 solid;
-    padding: 5% ;
-    margin: none;
-    font-size: medium;
-    background-color: #f2f2f2;
-    border-radius: 1rem 0 0 1rem;}
-.fa-money-bill-wave {
-    background-color: #deebff;
-    color : #0065fc;
-    font-size: large;
-    border: 1px #deebff solid; 
-    border-radius: 20px;
-    padding : 10px ;
-    margin-right: 10px ;}
-.fa-child {
-    background-color: #deebff;
-    color : #0065fc;
-    font-size: large;
-    border: 1px #deebff solid; 
-    border-radius: 50%;
-    padding : 10px ;
-    width: 20px;
-    margin-right: 10px }
-.fa-heart {
-    background-color: #deebff;
-    color : #0065fc;
-    font-size: large;
-    border: 1px #deebff solid; 
-    border-radius: 20px;
-    padding : 10px;
-    margin-right: 10px }
-.fa-dog { 
-    background-color: #deebff;
-    color : #0065fc;
-    font-size: large;
-    border: 1px #deebff solid; 
-    border-radius: 20px;
-    padding : 10px ;
-    margin-right: 10px}
-.fa-info-circle {
-    color: white;
-    background-color: #0065fc;
-    border-radius: 55%; 
-    border: 2px #f2f2f2 solid;
-    font-size: x-large}
-
-ul 
-{
-    list-style: none; 
-}
-    footer                                  /*PIED DE PAGE*/
-{
-    font-size: 13px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
-    flex-direction: row;
-    background-color: #f2f2f2;
-    width: 100%;
-    height: 100%;
-    margin: none; 
-}
-.footercolonne 
-{
-    display: flex;
-    max-width: 100%;
-    width: 1440px;
-    box-sizing: border-box;
-    padding: 20px 20px 20px 20px; 
-}
-.footlien 
-{
-    display: flex;
-    margin: 0.5rem 0 0 0; 
-}
-.footcolonne 
-{
-    width: 100%;
-    margin: auto; 
 }
