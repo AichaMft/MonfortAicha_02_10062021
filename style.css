@@ -3,7 +3,6 @@
     src: url("font/Raleway-Regular.ttf"); }
 
 header {
-    margin:1rem;
     width: 100%;
 }
 main {
@@ -405,7 +404,7 @@ footer h3 {
     }
     body {
         max-width: 420px;
-        margin:auto;
+        margin:0
     }
     header {
         width: 100%;
@@ -483,12 +482,17 @@ footer h3 {
     .fa-star {
     font-size: small;
     }
+    section {
+        margin:auto;
+        max-width: 370px;
+        min-width: 320px;
+    }
     #lespluspopulaires {
         order:0;
         flex:1 100%;
         border-radius: 0;
         padding:1rem;
-        margin:0 1rem 0 1rem;
+        margin:0;
     }
     #lespluspopulaires figure {
     height: 120px;
@@ -506,7 +510,6 @@ footer h3 {
         flex:2 100%;
         border-radius: 0;
         padding:1rem;
-        margin:0 1rem 0 1rem;
         background-color: white;
         flex-direction: column;
         justify-content: left;
@@ -528,9 +531,6 @@ footer h3 {
         font-size: medium;
         width: 320px;
         border-top:none;
-    }
-    #activitesmarseille {
-        margin:0 1rem 0 1rem;
     }
     #activitesmarseille img {
         width: 300px;
