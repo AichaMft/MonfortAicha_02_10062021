@@ -1,6 +1,15 @@
 @font-face {
     font-family: "raleway";
-    src: url("font/Raleway-Regular.ttf"); }
+    src: url("font/Raleway-Regular.ttf")
+}
+@font-face {
+    font-family: "raleway";
+    src: url("font/Raleway-Bold.ttf")
+}
+@font-face {
+    font-family: "raleway";
+    src: url("font/Raleway-Medium.ttf")
+}
 
 header {
     width: 100%;
@@ -498,7 +507,7 @@ footer h3 {
         flex:1 100%;
         border-radius: 0;
         margin:0;
-        padding:0;
+        padding:1rem 0 1rem 0;
         width: auto;
         max-width: 375px;
     }
