@@ -377,6 +377,7 @@ form button {
     flex-direction: column;
     border-radius: 1rem;
     margin:0.5rem 1rem 0.5rem 1rem;
+    padding:0;
     background-color: white;
     box-shadow: 0px 2px 1px 1px #f2f2f2;
 }
