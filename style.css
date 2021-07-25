@@ -11,19 +11,13 @@
     src: url("font/Raleway-Medium.ttf")
 }
 
-header {
-    width: 100%;
-    padding-top:1rem;
-}
 main {
     display: flex;
-    width: 100%;
     flex-direction: row; 
     justify-content: space-between;
     flex-wrap: wrap; 
 }
 body {
-    width:100%;
     margin:auto;
 }
 * {
@@ -33,14 +27,9 @@ a {
     color: inherit;
     text-decoration: none;
 }
-.logoreservia {
-    width: 110px;
-}
 .logo {
     order:0;
     flex: 1 25%;
-    float: left;
-    position: relative;
 }
 nav {
     display: flex;
@@ -48,10 +37,9 @@ nav {
     justify-content: flex-start;
     flex-wrap: nowrap ;
     align-content: center;
-    width: 100%;
+    margin:0.3rem;
 }
 .liennav {
-    font-weight: 500;
     border-top: 2px transparent solid;
     padding: 1.5rem 1rem 1rem 1rem;
 }
@@ -60,6 +48,7 @@ nav {
     color: #0065fc; 
 }
 .navinscription {
+    border-top: 2px transparent solid;
     padding: 1.5rem 1rem 1rem 1rem;
     color: #0065fc;
 }
@@ -74,15 +63,14 @@ nav {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: left;
-    margin:auto;
+    margin:0.3rem;
 }
 #recherche h1 {
     margin-bottom:0;
     flex-wrap: wrap;
 }
 #recherche p {
-    margin-bottom: 1rem;
-    margin-top: 0.3rem;
+    margin: 0.2rem;
     font-size: small;
     flex-wrap: wrap;
 }
@@ -90,7 +78,7 @@ form {                                         /*BARRE DE RECHERCHE*/
 
     display: inline-flex;
     height: 40px;
-    margin: 0 0 2rem 0;   
+    margin: 1rem 0 2rem 0;   
 }
 form input {
     font-weight: 600;
@@ -210,7 +198,7 @@ form button {
                             /*SECTION HEBERGEMENT A MARSEILLE*/
 #hebmarseille {                             
     order:1;
-    flex:2 20%;
+    flex:1;
     display: flex;
     flex-direction: row;
     font-size: small;
@@ -218,22 +206,21 @@ form button {
     justify-content: space-between;
     background-color: #f2f2f2;
     border-radius: 1rem; 
-    margin:0.5rem 1.5rem 0.5rem 1.5rem;
-    padding:1rem 1rem 2rem 1rem;
+    margin:0.5rem 2rem 0.5rem 0.5rem;
+    padding:1rem 1.5rem 2rem 1.5rem;
     box-shadow: 3px 3px 3px 3px #f2f2f2;
 }
 #hebmarseille h2 {
     order: 0;
     flex: 1 100%;
-    margin:0 0 0 1rem;
-    padding:1rem 0 1rem 0;
+    margin:1rem 0 1rem 0;
 }
 #hebmarseille figure {
     display: flex;
     flex-direction: column;
     box-shadow: 0px 2px 1px 1px rgb(206, 204, 204);
     border-radius: 1rem;
-    margin:1rem;
+    margin:1rem 0 1rem 0;
 }
 #hebmarseille img {
     margin: 0;
@@ -267,10 +254,10 @@ form button {
                                 /*SECTION LES PLUS POPULAIRES*/
 #lespluspopulaires {                
     order:2;
-    flex:1;
     display: flex;
     flex-direction: column; 
     font-size: small;
+    justify-content: left;
     flex-wrap: wrap;
     background-color: #f2f2f2;
     border: 1px #f2f2f2 solid;
@@ -281,19 +268,19 @@ form button {
 }
 .fa-chart-line {
     font-size: x-large;
-    padding: 1rem 0 0 0;
-    margin:0;
+    padding:1rem 0 0 0;
+    margin:0
 }
-
 .titrepopu {
     display: flex;
+    width:320px;
     flex-direction: row;
-    margin:0 1rem 0 1rem;
+    margin:0 0 0 1rem;
     justify-content: space-between;
 }
 #lespluspopulaires figure {
     display: flex;
-    width: 95%;
+    width: 300px;
     height: 110px;
     flex-wrap: wrap;
     padding:0.2rem;
@@ -357,7 +344,6 @@ form button {
                                 /*SECTION ACTIVITES A MARSEILLE*/
 #activitesmarseille {                   
     display: flex;
-    width: 100%;
     flex-direction: row;
     font-size: small;
     justify-content: space-between;
@@ -368,7 +354,7 @@ form button {
 }
 #activitesmarseille h2 {
     order: 0;
-    flex: 1 100%;
+    flex:1 95% ;
     margin:0;
     padding:1rem;
 }
@@ -460,15 +446,7 @@ footer h3 {
                                         /*VERSION MOBILE*/
 @media screen and (max-width: 420px) {
     main {
-        width: auto;
         flex-direction: column;  
-    }
-    body {
-        width: 100%;
-        margin:auto;
-    }
-    header {
-        width: 100%;
     }
     nav {
         justify-content: space-between;
@@ -496,8 +474,8 @@ footer h3 {
         padding:1rem;
     }
     #recherche {
-        width: 100%;
-        margin:1rem;
+        padding:0.5rem;
+        margin:0;
         flex-wrap: wrap;
     }
     form {
@@ -541,70 +519,51 @@ footer h3 {
     #filtres button {
         margin: 0.25rem ;
     }
-    .infobulle {
-        font-weight: 600;
-    }
     .fa-star {
     font-size: small;
     }
-    section {
-        margin:auto;
-        max-width: 420px;
-        width: auto;
-        justify-content: center;
-    }
     #lespluspopulaires {
         order:0;
-        flex:1 100%;
+        flex:1;
         border-radius: 0;
         margin:0;
+        align-content: center;
         padding:1rem 0 1rem 0;
-        width: auto;
-        max-width: 375px;
+    }
+    .titrepopu {
+        margin:0;
     }
     .fa-chart-line {
         font-size: x-large;
-        padding: 1rem 0 0 0;
-        margin:0 3rem 0 0;
     }
     #lespluspopulaires figure {
-    height: 120px;
-    max-width: 320px;
-    margin:1rem 0 1rem 0.5rem;
-    }
-    #lespluspopulaires img {
-        width: 110px;
-        height: 120px
+        width: 280px;
     }
     #lespluspopulaires figcaption {
         font-size: medium;
     }
     #hebmarseille {
         order:1;
-        flex:2 100%;
+        flex:2 ;
         border-radius: 0;
         padding:1rem;
+        margin:0;
         background-color: white;
         flex-direction: column;
-        justify-content: left;
+        justify-content: center;
         box-shadow: none;
     }
     #hebmarseille figure {
-        margin:0.5rem 0 0.5rem 0;
-        width: 305px;
+        margin:0 1rem 1rem 1rem;
         padding:0.2rem;
-        box-shadow: 1px 1px 1px 2px #f2f2f2;
+        box-shadow: 1px 1px 1px 1px #f2f2f2 transparent ;
     }
     #hebmarseille img {
-        width: 300px;
-        height:150px;
+        width:auto;
     }
-    #hebmarseille figcaption {
-        padding:0.3rem;
-        padding-top:0.3rem;
-        font-size: medium;
-        width: 320px;
-        border-top:none;
+    #activitesmarseille {
+        margin:1rem 0 1rem 0;
+        justify-content: center;
     }
     #activitesmarseille img {
         width: 300px;
@@ -614,10 +573,8 @@ footer h3 {
         flex-direction: column;
         height: auto;
         font-size: small;
-        width: 100%;
     }
     .footercolonne {
-        width: 100%;
         margin: 0;
     }
 }
@@ -630,6 +587,7 @@ footer h3 {
         margin: 0.25rem ;
     }
     #lespluspopulaires {
+        order:0;
         flex:1 100%;
         flex-direction: row;
         margin:1rem;
@@ -650,6 +608,10 @@ footer h3 {
     }
     #lespluspopulaires figcaption {
         font-size: medium;
+    }
+    #hebmarseille {
+        margin:1rem;
+        padding:1rem
     }
     .miniact {
         order:0;
