@@ -19,6 +19,7 @@ main {
 }
 body {
     margin:auto;
+    max-width:1400px;
 }
 * {
     font-family: "raleway";
@@ -63,7 +64,7 @@ nav {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: left;
-    margin:0;
+    margin:0.5rem;
 }
 #recherche h1 {
     margin:0;
@@ -556,7 +557,7 @@ footer h3 {
     #hebmarseille figure {
         margin:0 1rem 1rem 1rem;
         padding:0.2rem;
-        box-shadow: 1px 1px 1px 1px #f2f2f2 transparent ;
+        box-shadow: 1px 1px 1px 1px #f2f2f2;
     }
     #hebmarseille img {
         width:auto;
@@ -591,7 +592,7 @@ footer h3 {
         flex:1 100%;
         flex-direction: row;
         margin:1rem;
-        justify-content: safe;
+        justify-content: space-between;
     }
     .titrepopu {
         order:-1;
